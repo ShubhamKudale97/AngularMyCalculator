@@ -1,0 +1,68 @@
+<h1>My Calculator</h1>
+<hr>
+
+<!--<style>
+        table, td ,tr{
+          border: 1px solid black;
+          /* border-collapse: collapse; */
+        }
+      </style> -->
+
+<body>
+  <table class=" table-bordered ">
+    <tr>
+      <th colspan="4">
+        <input type="text" class="form-control" [value]="out_put" disabled />
+      </th>
+    </tr>
+    <tr>
+      <th colspan="4">
+        <input type="text" class="form-control" [(ngModel)]="out" (input)="onInput($event)" />
+      </th>
+    </tr>
+    <tr>
+      <td align="center"><input type="button" value=" 1 " (click)="showInput(1)" /></td>
+      <td align="center"><input type="button" value=" 2 " (click)="showInput(2)" /></td>
+      <td align="center"><input type="button" value=" 3 " (click)="showInput(3)" /></td>
+      <td align="center"><input type="button" value=" + " (click)=" addBtnClick()" /> </td>
+    </tr>
+    <tr>
+      <td align="center"><input type="button" value=" 4 " (click)="showInput(4)" /></td>
+      <td align="center"><input type="button" value=" 5 " (click)="showInput(5)" /></td>
+      <td align="center"><input type="button" value=" 6 " (click)="showInput(6)" /></td>
+      <td align="center"><input type="button" value=" - " (click)=" subBtnClick()" /> </td>
+
+    </tr>
+    <tr>
+      <td align="center"><input type="button" value=" 7 " (click)="showInput(7)" /> </td>
+      <td align="center"><input type="button" value=" 8 " (click)="showInput(8)" /> </td>
+      <td align="center"><input type="button" value=" 9 " (click)="showInput(9)" /> </td>
+      <td align="center"><input type="button" value=" * " (click)=" multiBtnClick()" /> </td>
+    </tr>
+    <tr>
+      <td align="center"><input type="button" value=" . " (click)="addDot()" /></td>
+      <td align="center"><input type="button" value=" 0 " (click)="showInput(0)" /></td>
+      <td align="center"><input type="button" value=" % " (click)="percent()" /></td>
+      <td align="center"><input type="button" value=" / " (click)=" divideBtnClick()" /> </td>
+    </tr>
+    <tr>
+      <td align="center"><input type="button" value=" sin " (click)="addDot()" /></td>
+      <td align="center"><input type="button" value=" cos " (click)="showInput(0)" /></td>
+      <td align="center"><input type="button" value=" tan" (click)="percent()" /></td>
+      <td align="center"><input type="button" value=" 1/x " (click)=" divideBtnClick()" /> </td>
+    </tr>
+    <tr>
+      <td align="center"><input type="button" value=" c " (click)="clear()" /></td>
+      <td align="center"><input type="button" value=" AC " (click)="allClear()" /></td>
+      <td align="center"><input type="button" value=" sq root " (click)="sqroot()" /> </td>
+      <td align="center"><input type="button" value=" = " (click)="equalTo()" /></td>
+    </tr>
+  </table>
+  <br>
+  <!-- <input type="text" [value]="out_put" (input)="$event"> -->
+</body>
+{{"this output-->" + out_put}}
+<br />
+{{"this num-->" + num}}
+
+{{inumber}}
